@@ -201,6 +201,8 @@ namespace HotelGestionale.Controllers
             return View(prenotazioni);
         }
 
+        //restituisce il numero di prenotazioni con pensione completa
+
         [HttpGet]
         public async Task<IActionResult> PensioneCompleta()
         {
@@ -220,6 +222,7 @@ namespace HotelGestionale.Controllers
             return RedirectToAction("Index");
         }
 
+        // medoto per effettuare il checkout di una prenotazione
         public async Task<IActionResult> Checkout(int? id)
         {
             if (id == null)

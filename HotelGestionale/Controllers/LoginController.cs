@@ -27,6 +27,8 @@ namespace HotelGestionale.Controllers
         {
             return View();
         }
+
+        // Metodo per gestire la richiesta di login
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(Login login)
@@ -42,9 +44,9 @@ namespace HotelGestionale.Controllers
                 }
 
                 var claims = new List<Claim>
-                                        {
-                                            new Claim(ClaimTypes.Name, user.Username)
-                                        };
+                {
+                    new Claim(ClaimTypes.Name, user.Username)
+                };
 
                 var claimsIdentity = new ClaimsIdentity(
                     claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -63,6 +65,8 @@ namespace HotelGestionale.Controllers
             }
             return View(login);
         }
+
+        // Metodo per gestire la richiesta di logout
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);

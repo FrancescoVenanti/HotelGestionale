@@ -30,6 +30,8 @@ namespace HotelGestionale.Controllers
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
+
+        //metodo per validare l'email
         public ActionResult EmailValidator(string Email)
         {
             string pattern = @"^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+.[A-Za-z]{2,}$";

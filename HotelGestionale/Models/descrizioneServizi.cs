@@ -2,6 +2,7 @@
 
 namespace HotelGestionale.Models
 {
+    // enum per i servizi offerti da''hotel, viene utilizzato per la creazione di un nuovo servizio
     public enum descrizioneServizi
     {
         [Display(Name = "Colazione in camera")]

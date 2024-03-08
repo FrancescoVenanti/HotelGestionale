@@ -8,7 +8,7 @@ namespace HotelGestionale.Models
         public int ID { get; set; }
         [Display(Name = "Descrizione")]
         [Required(ErrorMessage = "La descrizione è obbligatorio")]
-        public string Descrizione { get; set; }
+        public descrizioneServizi Descrizione { get; set; }
         [Display(Name = "Prezzo")]
         public double ?Prezzo { get; set; }
         [Display(Name = "Data Servizio")]
